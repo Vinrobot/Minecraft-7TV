@@ -4,7 +4,6 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.screen.ScreenTexts;
 import net.minecraft.text.Text;
 import net.vinrobot.mcemote.config.Configuration;
@@ -24,7 +23,7 @@ public class ConfigurationScreen extends BaseScreen {
 	private final ConfigurationManager configManager;
 
 	private ButtonWidget doneButton;
-	private TextFieldWidget twitchIdField;
+	private CustomTextFieldWidget twitchIdField;
 	private SliderFieldWidget emoteScalingField;
 
 	public ConfigurationScreen(final Screen parent, final ConfigurationManager configManager) {
@@ -45,7 +44,7 @@ public class ConfigurationScreen extends BaseScreen {
 		final int widgetX = (this.width - widgetWidth) / 2;
 		final Configuration config = this.configManager.getConfig();
 
-		this.twitchIdField = new TextFieldWidget(this.textRenderer, widgetX, 75, widgetWidth, widgetHeight, TWITCH_ID_LABEL);
+		this.twitchIdField = new CustomTextFieldWidget(this.textRenderer, widgetX, 75, widgetWidth, widgetHeight, TWITCH_ID_LABEL);
 		this.twitchIdField.setMaxLength(32);
 		this.twitchIdField.setText(config.twitchId().get());
 		this.twitchIdField.setChangedListener((value) -> this.validateInputs());
