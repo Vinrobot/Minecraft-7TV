@@ -26,13 +26,13 @@ public class BaseScreen extends Screen {
 
 		// Background (Middle)
 		context.setShaderColor(0.125F, 0.125F, 0.125F, 1.0F);
-		context.drawTexture(Screen.OPTIONS_BACKGROUND_TEXTURE, 0, marginTop, this.width, bottom, this.width, bottom - marginTop, 32, 32);
+		context.drawTexture(Screen.MENU_BACKGROUND_TEXTURE, 0, marginTop, this.width, bottom, this.width, bottom - marginTop, 32, 32);
 		context.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 
 		// Background (Top & Bottom), based on Screen.renderBackgroundTexture(DrawContext)
 		context.setShaderColor(0.25F, 0.25F, 0.25F, 1.0F);
-		context.drawTexture(Screen.OPTIONS_BACKGROUND_TEXTURE, 0, 0, 0.0F, 0.0F, this.width, marginTop, 32, 32);
-		context.drawTexture(Screen.OPTIONS_BACKGROUND_TEXTURE, 0, bottom, 0.0F, bottom, this.width, this.height - bottom, 32, 32);
+		context.drawTexture(Screen.MENU_BACKGROUND_TEXTURE, 0, 0, 0.0F, 0.0F, this.width, marginTop, 32, 32);
+		context.drawTexture(Screen.MENU_BACKGROUND_TEXTURE, 0, bottom, 0.0F, bottom, this.width, this.height - bottom, 32, 32);
 		context.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 
 		// Gradients

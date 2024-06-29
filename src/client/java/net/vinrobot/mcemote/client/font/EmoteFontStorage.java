@@ -20,7 +20,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class EmoteFontStorage extends CustomFontStorage {
-	public static final Identifier IDENTIFIER = new Identifier("mcemote.fonts", "emotes");
+	public static final Identifier IDENTIFIER = Identifier.of("mcemote.fonts", "emotes");
 
 	private final EmotesManager emotesManager;
 	private final Map<Integer, Future<AnimatedGlyph>> framesCache = new HashMap<>();

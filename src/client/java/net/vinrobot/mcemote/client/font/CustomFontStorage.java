@@ -2,6 +2,7 @@ package net.vinrobot.mcemote.client.font;
 
 import net.minecraft.client.font.BuiltinEmptyGlyph;
 import net.minecraft.client.font.Font;
+import net.minecraft.client.font.FontFilterType;
 import net.minecraft.client.font.FontStorage;
 import net.minecraft.client.font.Glyph;
 import net.minecraft.client.font.GlyphRenderer;
@@ -10,6 +11,7 @@ import net.minecraft.client.texture.TextureManager;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
+import java.util.Set;
 
 public abstract class CustomFontStorage extends FontStorage {
 	public static final float GLYPH_HEIGHT = TextRenderer.ARABIC_SHAPING_LETTERS_SHAPE;
@@ -37,7 +39,7 @@ public abstract class CustomFontStorage extends FontStorage {
 	}
 
 	@Override
-	public void setFonts(final List<Font> fonts) {
+	public void setFonts(List<Font.FontFilterPair> allFonts, Set<FontFilterType> activeFilters) {
 		throw new UnsupportedOperationException();
 	}
 
